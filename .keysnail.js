@@ -74,10 +74,6 @@ key.setGlobalKey(['<f1>', 'b'], function (ev) {
                 key.listKeyBindings();
             }, 'List all keybindings');
 
-key.setGlobalKey(['<f1>', 'F'], function (ev) {
-                openHelpLink("firefox-help");
-            }, 'Display Firefox help');
-
 key.setGlobalKey('C-m', function (ev) {
                 key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_RETURN, true);
             }, 'Generate the return key code');
@@ -89,10 +85,6 @@ key.setGlobalKey(['C-x', '1'], function (ev) {
 key.setGlobalKey(['C-x', 'l'], function (ev) {
                 command.focusToById("urlbar");
             }, 'Focus to the location bar', true);
-
-key.setGlobalKey(['C-x', 'g'], function (ev) {
-                command.focusToById("searchbar");
-            }, 'Focus to the search bar', true);
 
 key.setGlobalKey(['C-x', 't'], function (ev) {
                 command.focusElement(command.elementsRetrieverTextarea, 0);
