@@ -164,11 +164,11 @@ key.setGlobalKey([['C-M-h'], ['C-M-p'], ['C-j', 'p']], function (ev) {
 
 
 key.setViewKey([['C-n'], ['j']], function (ev) {
-                key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_DOWN, true);
+                key.feed('j')
             }, 'Scroll line down');
 
 key.setViewKey([['C-p'], ['k']], function (ev) {
-                key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_UP, true);
+                key.feed('k')
             }, 'Scroll line up');
 
 key.setViewKey([['C-f'], ['.']], function (ev) {
