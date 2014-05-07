@@ -171,7 +171,7 @@ key.setViewKey([['C-b'], [',']], function (ev) {
                 key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_LEFT, true);
             }, 'Scroll left');
 
-key.setViewKey([['M-v'], ['b']], function (ev) {
+key.setViewKey('M-v', function (ev) {
                 goDoCommand("cmd_scrollPageUp");
             }, 'Scroll page up');
 
@@ -179,21 +179,13 @@ key.setViewKey('C-v', function (ev) {
                 goDoCommand("cmd_scrollPageDown");
             }, 'Scroll page down');
 
-key.setViewKey([['M-<'], ['g']], function (ev) {
+key.setViewKey('M-<', function (ev) {
                 goDoCommand("cmd_scrollTop");
             }, 'Scroll to the top of the page', true);
 
-key.setViewKey([['M->'], ['G']], function (ev) {
+key.setViewKey('M->', function (ev) {
                 goDoCommand("cmd_scrollBottom");
             }, 'Scroll to the bottom of the page', true);
-
-key.setViewKey('l', function (ev) {
-                getBrowser().mTabContainer.advanceSelectedTab(1, true);
-            }, 'Select next tab');
-
-key.setViewKey('h', function (ev) {
-                getBrowser().mTabContainer.advanceSelectedTab(-1, true);
-            }, 'Select previous tab');
 
 key.setViewKey(':', function (ev, arg) {
                 shell.input(null, arg);
@@ -203,7 +195,7 @@ key.setViewKey('R', function (ev) {
                 BrowserReload();
             }, 'Reload the page', true);
 
-key.setViewKey('B', function (ev) {
+key.setViewKey(['B', ["C-c", "b"]], function (ev) {
                 BrowserBack();
             }, 'Back');
 
@@ -462,7 +454,7 @@ key.setViewKey(['C-x', 'b'], function (ev, arg) {
 
 // hok plugin
 
-key.setGlobalKey(["C-c","SPC"], function (aEvent, aArg) {
+key.setGlobalKey([["C-c","SPC"], ["C-c", "g"]], function (aEvent, aArg) {
         ext.exec("hok-start-foreground-mode", aArg);
 }, "Hok - Foreground hint mode", true);
 
