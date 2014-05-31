@@ -191,15 +191,15 @@ key.setViewKey(':', function (ev, arg) {
                 shell.input(null, arg);
             }, 'List and execute commands', true);
 
-key.setViewKey('R', function (ev) {
+key.setViewKey(["C-c", "C-r"], function (ev) {
                 BrowserReload();
             }, 'Reload the page', true);
 
-key.setViewKey(['B', ["C-c", "b"]], function (ev) {
+key.setViewKey(["C-c", "C-b"], function (ev) {
                 BrowserBack();
             }, 'Back');
 
-key.setViewKey('F', function (ev) {
+key.setViewKey(["C-c", "C-f"], function (ev) {
                 BrowserForward();
             }, 'Forward');
 
