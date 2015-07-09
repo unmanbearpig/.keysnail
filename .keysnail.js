@@ -149,7 +149,7 @@ key.setGlobalKey([['M-s', 's']], function (ev) {
     ext.exec("find-current-tab");
 }, 'Emacs like incremental search forward', true);
 
-key.setGlobalKey([['M-s', 'M-s']], function (aEvent, aArg) {
+key.setGlobalKey([['M-s', 'M-s'], ['C-x', 's']], function (aEvent, aArg) {
     ext.exec("find-current-tab-link-text-and-url");
 }, 'Find current tab link text and url', true);
 
